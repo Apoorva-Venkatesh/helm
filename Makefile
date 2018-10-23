@@ -138,6 +138,6 @@ ifndef HAS_HG
 	$(error You must install Mercurial)
 endif
 	glide install --strip-vendor
-        go build -o bin/protoc-gen-go ./vendor/github.com/golang/protobuf/protoc-gen-go
+	go build -o bin/protoc-gen-go ./vendor/github.com/golang/protobuf/protoc-gen-go
 
 include versioning.mk
