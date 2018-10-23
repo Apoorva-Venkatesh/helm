@@ -138,6 +138,6 @@ ifndef HAS_HG
 	$(error You must install Mercurial)
 endif
 	glide install --strip-vendor
-	GOOS=linux GOARCH=s390x CGO_ENABLED=0 go build -o bin/protoc-gen-go ./vendor/github.com/golang/protobuf/protoc-gen-go
+	GOOS=linux GOARCH=s390x CGO_ENABLED=0 go build -o bin/protoc-gen-go -tags '$(TAGS)' -ldflags '$(LDFLAGS)' ./vendor/github.com/golang/protobuf/protoc-gen-go
 
 include versioning.mk
